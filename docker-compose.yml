@@ -1,16 +1,6 @@
 version: '3.8'
 
 services:
-  database:  
-    image: mongo:4.4
-    container_name: database  
-    ports:
-      - "27018:27017"
-    volumes:
-      - mongo-data:/data/db
-    networks:
-      - app-network
-
   express:
     build: .
     container_name: express
@@ -18,12 +8,7 @@ services:
       - "5000:5000"
     networks:
       - app-network
-    depends_on:
-      - database  
 
 networks:
   app-network:
     driver: bridge
-
-volumes:
-  mongo-data:
