@@ -19,7 +19,7 @@ services:
     networks:
       - app-network
     depends_on:
-      - mongo
+      - mongo2
 
 networks:
   app-network:
