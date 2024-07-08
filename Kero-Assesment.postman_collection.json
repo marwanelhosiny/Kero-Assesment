@@ -1,0 +1,89 @@
+{
+	"info": {
+		"_postman_id": "d775513a-9b5a-4ac7-9942-3a2f637f7174",
+		"name": "Kero-Assesment",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31092402"
+	},
+	"item": [
+		{
+			"name": "signup",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "elhosinymarwan29@gmail.com",
+							"type": "text"
+						},
+						{
+							"key": "phone",
+							"value": "+201003301021",
+							"type": "text"
+						},
+						{
+							"key": "fullName",
+							"value": "Marwan Mohammed",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						},
+						{
+							"key": "ID",
+							"type": "file",
+							"src": "/C:/Users/Tweety/Desktop/age.png"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"elhosinymarwan29@gmail.com\",\r\n    \"password\":\"12345678\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:5000/user/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "5000",
+					"path": [
+						"user",
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
