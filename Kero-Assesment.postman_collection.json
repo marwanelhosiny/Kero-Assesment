@@ -42,10 +42,13 @@
 					]
 				},
 				"url": {
-					"raw": "http://localhost:5000/user/",
+					"raw": "http://157.173.220.170:5000/user/",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"157",
+						"173",
+						"220",
+						"170"
 					],
 					"port": "5000",
 					"path": [
@@ -71,10 +74,13 @@
 					}
 				},
 				"url": {
-					"raw": "http://localhost:5000/user/login",
+					"raw": "http://157.173.220.170:5000/user/login",
 					"protocol": "http",
 					"host": [
-						"localhost"
+						"157",
+						"173",
+						"220",
+						"170"
 					],
 					"port": "5000",
 					"path": [

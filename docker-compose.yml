@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+  mongo:
+    image: mongo:4.4
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - app-network
+
+  express:
+    build: .
+    container_name: express
+    ports:
+      - "5000:5000"
+    networks:
+      - app-network
+    depends_on:
+      - mongo
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo-data:
