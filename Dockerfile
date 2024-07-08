@@ -7,6 +7,9 @@ WORKDIR /usr/src/app
 # Copy the app code to the working directory
 COPY . .
 
+# Copy the .env file from the config folder to the working directory
+COPY config/.env ./
+
 # Install app dependencies
 RUN npm install express mongoose
 
